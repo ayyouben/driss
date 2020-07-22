@@ -16,7 +16,7 @@
           </li>
           <li class="nav-item ">
           <button type="button" class="btn btn-primary ml-3 mr-3 hh"
-            style="width: -webkit-fill-available;"  onclick="navigate('user/add_user');"> 
+            style="width: -webkit-fill-available;"  onclick="navigate('user/utilisateur');"> 
             Article
            </button>
           </li>
