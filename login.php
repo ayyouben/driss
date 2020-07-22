@@ -9,7 +9,7 @@ session_start();
       $email = mysqli_real_escape_string($db,$_POST['email']);
       $password = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT * FROM utilisateur WHERE Email = '$email' and Password = '$password'";
+      $sql = "SELECT * FROM Utilisateur WHERE Email = '$email' and Password = '$password'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
      // $active = $row['active'];

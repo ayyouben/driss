@@ -1,8 +1,10 @@
 
-$(document).ready(function(){
 
-    $('.hh').click(function(){
-      var link=$(this).val();
+
+
+function navigate(link){
+
+  //var link=$(this).val();
      // var userid = $(this).data('id');
    
       // AJAX request
@@ -15,17 +17,33 @@ $(document).ready(function(){
          $('#content').html(response);
        }
      });
+}
+
+/*$(document).ready(function(){
+
+    $('.hh').click(function(){
+      var link=$(this).val();
+ 
+     $.ajax({
+       url: 'admin/'+link+'.php',
+       type: 'post',
+       
+       success: function(response){ 
+        
+         $('#content').html(response);
+       }
+     });
         
     });
-   });
-   function showNotification(from, align){
+   })*/
+   function showNotification(from, align , message,type){
 
     jQuery.notify({
         icon: "add_alert",
-        message: "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer."
+        message: message
   
     },{
-        type: 'danger',
+      type: type,
         timer: 4000,
         placement: {
             from: from,
@@ -33,6 +51,7 @@ $(document).ready(function(){
         }
     });
   }
+// -------- Ajax login function ------------------>
 
   $(document).ready(function(){
 
@@ -55,7 +74,7 @@ $(document).ready(function(){
          
          window.location='tamplate.php';
          }else{
-          showNotification('top','center');
+          showNotification('top','center','Votre Email ou Mot de passe ne sont pas correcte .','danger');
          }
        }
      });
